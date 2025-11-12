@@ -1,0 +1,3 @@
+# Main Caddyfile for all servers that simply imports the contents of the Caddyfile.d directory
+
+import /etc/caddy/conf.d/*

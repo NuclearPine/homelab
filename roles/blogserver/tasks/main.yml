@@ -1,11 +1,11 @@
 ---
 - name: copy blog config file
   copy:
-    src: nginx_confs/blog.conf
-    dest: /etc/nginx/conf.d/blog.conf
+    src: caddy_confs/blog.caddyfile
+    dest: /etc/caddy/conf.d/blog.caddyfile
     owner: root
     mode: 0644
-  notify: restart nginx
+  notify: restart caddy
 
 - name: pull down static site from Github
   ansible.builtin.git:

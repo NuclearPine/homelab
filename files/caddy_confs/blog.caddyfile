@@ -1,0 +1,4 @@
+pyrah.us {
+    root * /var/www/pyrah.us
+    file_server
+}
