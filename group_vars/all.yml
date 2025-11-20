@@ -1,5 +1,5 @@
 ---
-pubkey_jakkspc: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH0x+XS9+4psMxWpASboko+cyZITLYFKIO1jO4ACPk2m jakks@jakkspc"
 pubkey_thinkpad: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIG/rHPK87smZNfNKVOpmWsYohE2jXKxTARdiQeMMk99Z jakks@thinkpad"
+pubkey_jakkspc: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII/f2RsU45aBPMHZMxcAxkLYolXVbb3iWAOsJsFhHn/r jakks@mars"
 
 tailscale_args: "--accept-routes"
