@@ -7,9 +7,27 @@
     mode: 0644
   notify: restart caddy
 
-- name: pull down static site from Github
-  ansible.builtin.git:
-    repo: https://github.com/NuclearPine/blog-static
-    dest: /var/www/pyrah.us
+- name: Pull down static site files from GitHub
+  block:
+    - name: Download tarball into temp folder
+      ansible.builtin.get_url:
+        url: https://github.com/NuclearPine/blog-source/releases/latest/download/site.tar.gz
+        dest: /tmp/site.tar.gz
+
+    - name: Backup current running version of the site
+      ansible.builtin.command: mv /var/www/pyrah.us /var/www/pyrah.us.bak
+      ignore_errors: true
+
+    - name: Re-create site directory
+      ansible.builtin.file:
+        path: /var/www/pyrah.us
+        state: directory
+
+    - name: Extract tarball
+      ansible.builtin.unarchive:
+        src: /tmp/site.tar.gz
+        dest: /var/www/pyrah.us
+        remote_src: yes
+
   tags: ["update-blog", "never"]
   become: true
