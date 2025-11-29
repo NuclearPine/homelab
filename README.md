@@ -1,6 +1,6 @@
-# Jackson's automation stuff
+# Jackson's homelab stuff
 
-Mostly Ansible right now - feel free to use as a template for your own projects.
+Mostly just Ansible automation right now - feel free to use as inspiration for your own projects.
 
 
 ## Ansible Galaxy dependencies
