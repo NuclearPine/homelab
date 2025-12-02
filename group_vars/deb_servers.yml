@@ -9,7 +9,6 @@ package_list:
   - podman
   - chrony
   - curl
-  - software-properties-common
 
 service_list:
   - chronyd
