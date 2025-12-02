@@ -9,6 +9,7 @@ package_list:
   - podman
   - chrony
   - curl
+  - htop
 
 service_list:
   - chronyd
